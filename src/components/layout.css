@@ -32,16 +32,21 @@ h6 {
   font-size: 2rem;
 }
 
-.default-background {
-  min-height: 90vh;
+.default-background,
+.about-background {
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-position: center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
   background: linear-gradient(rgba(255, 158, 9, 0.5), rgba(255, 158, 9, 0.5));
   opacity: 1 !important;
+}
+
+.about-background {
+  min-height: 60vh;
 }
 
 .btn-yellow {

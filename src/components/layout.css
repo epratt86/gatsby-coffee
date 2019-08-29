@@ -1,5 +1,5 @@
 :root {
-  --mainBrown: #2d1ef1;
+  --mainBrown: #2d1e1f;
   --mainYellow: rgb(255, 158, 9);
   --mainGrey: #ece8dc;
   --mainWhite: #fff;
@@ -42,4 +42,15 @@ h6 {
   background-repeat: no-repeat;
   background: linear-gradient(rgba(255, 158, 9, 0.5), rgba(255, 158, 9, 0.5));
   opacity: 1 !important;
+}
+
+.btn-yellow {
+  color: var(--mainYellow);
+  border-color: var(--mainYellow);
+  transition: 0.6s;
+}
+
+.btn-yellow:hover {
+  background: var(--mainYellow);
+  color: var(--mainBrown);
 }

@@ -2,7 +2,7 @@
   --mainBrown: #2d1e1f;
   --mainYellow: rgb(255, 158, 9);
   --mainGrey: #ece8dc;
-  --mainWhite: #fff;
+  --mainWhite: #f8f9fa;
   --mainDark: #222;
 }
 
@@ -34,7 +34,7 @@ h6 {
 
 .default-background,
 .about-background {
-  min-height: 100vh;
+  min-height: 95vh; /* offset header height */
   display: flex;
   align-items: center;
   justify-content: center;

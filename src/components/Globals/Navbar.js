@@ -31,8 +31,8 @@ export default class Navbar extends Component {
 
   render() {
     return (
-      <div className="bg-light w-100">
-        <nav className="navbar navbar-expand-sm bg-light navbar-light container">
+      <nav className="navbar navbar-expand-sm bg-light navbar-light container">
+        <div className="container">
           <Link to="/" className="navbar-brand">
             <img src={logo} alt="logo" />
             {/* https://www.iconfinder.com/icons/185113/coffee_streamline_icon
@@ -62,8 +62,8 @@ export default class Navbar extends Component {
               </li>
             </ul>
           </div>
-        </nav>
-      </div>
+        </div>
+      </nav>
     )
   }
 }

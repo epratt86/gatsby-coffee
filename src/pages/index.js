@@ -1,10 +1,11 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import BackgroundSection from "../components/Globals/BackgroundSection"
 import Info from "../components/Home/info"
+import CafeMenu from "../components/Home/CafeMenu"
 
 const IndexPage = ({ data }) => (
   <Layout>
@@ -15,6 +16,7 @@ const IndexPage = ({ data }) => (
       styleClass="default-background"
     />
     <Info />
+    <CafeMenu items={data.menu} />
   </Layout>
 )
 
@@ -24,6 +26,24 @@ export const query = graphql`
       childImageSharp {
         fluid(maxWidth: 1920) {
           ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+    menu: allContentfulCafeMenu {
+      edges {
+        node {
+          id
+          title
+          description {
+            description
+          }
+          price
+          category
+          image {
+            fixed(width: 50, height: 50) {
+              ...GatsbyContentfulFixed_tracedSVG
+            }
+          }
         }
       }
     }
